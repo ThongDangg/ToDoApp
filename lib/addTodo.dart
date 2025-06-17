@@ -19,7 +19,14 @@ class _AddTodoState extends State<AddTodo> {
       children: [
         Text("Add to do:"),
         TextField(
-          autofocus: true, //nhay vao text field luon ngay khi bottomsheet nhay ra
+          onSubmitted: (value) { //submit từ bàn phím cũng add đc 
+            if (todoText.text.isNotEmpty) {
+              widget.addTodo(todoText: todoText.text);
+            } else {}
+            todoText.text = '';
+          },
+          autofocus:
+              true, //nhay vao text field luon ngay khi bottomsheet nhay ra
           controller: todoText,
 
           decoration: InputDecoration(

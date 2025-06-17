@@ -15,9 +15,14 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
+    
+
     return MaterialApp(
       theme: ThemeData.light(useMaterial3: true),
-      home: MainScreen(),
+      home: MainScreen()
+      //Text(// (marks >= 40) ? "PASS" : "FAIL",
+        // style: TextStyle(color: (marks>=40) ? Colors.green : Colors.amber)), //dấu ? là then giống của if, : giống của else nghĩa là otherwise
+      
     );
   }
 }
